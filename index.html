@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CraftRoots Support Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">
+        <span class="brand-mark">CR</span>
+        <div>
+          <strong>CraftRoots</strong>
+          <small>Support Assistant</small>
+        </div>
+      </div>
+      <a href="#demo" class="nav-link">Try assistant</a>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">Where travelers become makers, and artisans become hosts.</p>
+      <h1>Ask CraftRoots anything before your workshop.</h1>
+      <p class="hero-copy">
+        A support assistant for travelers and artisans, grounded in CraftRoots knowledge about bookings,
+        workshop guidance, verification, safety, family planning, artisan onboarding, and escalation rules.
+      </p>
+      <div class="hero-actions">
+        <a href="#demo" class="button primary">Open assistant</a>
+        <a href="#knowledge" class="button secondary">View knowledge areas</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="cards" id="knowledge">
+      <article>
+        <span>01</span>
+        <h3>Traveler support</h3>
+        <p>Booking flow, session preparation, cancellation guidance, location support, and post-session reviews.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Artisan support</h3>
+        <p>Onboarding, availability, earnings, reviews, payouts, and low-digital-literacy guidance.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Human escalation</h3>
+        <p>Safety, accessibility, refunds, live availability, no-shows, and corporate requests are routed to humans.</p>
+      </article>
+    </section>
+
+    <section class="chat-shell" id="demo">
+      <div class="chat-info">
+        <p class="eyebrow">Visible RAG prototype</p>
+        <h2>CraftRoots Support Assistant</h2>
+        <p>
+          This local demo shows how a RAG chatbot should behave. It retrieves from a small CraftRoots
+          knowledge set and refuses to invent live booking information.
+        </p>
+
+        <div class="quick-tests">
+          <button data-question="What is CraftRoots?">What is CraftRoots?</button>
+          <button data-question="Can I book a family-friendly session for my parents and niece?">Family session</button>
+          <button data-question="How does CraftRoots verify artisans?">Artisan verification</button>
+          <button data-question="Can you confirm a blue pottery slot tomorrow at 2 PM?">Live slot test</button>
+          <button data-question="What if the artisan does not show up?">No-show issue</button>
+        </div>
+      </div>
+
+      <div class="chat-card">
+        <div class="chat-header">
+          <div>
+            <strong>CraftRoots Assistant</strong>
+            <small>Grounded support response</small>
+          </div>
+          <span class="status">RAG demo</span>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="message assistant">
+            <p>Hello! Ask me about CraftRoots bookings, workshops, artisan verification, safety, family planning, or artisan onboarding.</p>
+            <div class="source">Source: CraftRoots knowledge base</div>
+          </div>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <input id="questionInput" type="text" placeholder="Ask a CraftRoots support question..." autocomplete="off" />
+          <button type="submit">Ask</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="risk-section">
+      <div>
+        <p class="eyebrow">Risk control</p>
+        <h2>Designed to reduce hallucinations.</h2>
+        <p>
+          The assistant does not confirm real bookings, live slots, exact prices, refunds, or safety guarantees.
+          When the answer needs current or sensitive data, it escalates to human support.
+        </p>
+      </div>
+      <ul>
+        <li>No live booking confirmation without booking data.</li>
+        <li>No invented artisan verification.</li>
+        <li>No unsupported exact price claims.</li>
+        <li>Escalation for no-show, accessibility, refunds, and safety concerns.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>CraftRoots Support Assistant — product-style demo for the CraftRoots RAG support system.</p>
+  </footer>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
